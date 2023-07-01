@@ -6,11 +6,12 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export const CustomSelect = ({ options, title }) => {
+export const CustomSelect = ({ options, title, callback }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
+    callback(event.target.value);
   };
 
   return (
@@ -38,4 +39,5 @@ export const CustomSelect = ({ options, title }) => {
 CustomSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
+  callback: PropTypes.func.isRequired,
 };

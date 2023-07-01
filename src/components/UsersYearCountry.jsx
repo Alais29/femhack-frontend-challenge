@@ -13,11 +13,9 @@ import {
 } from 'chart.js';
 import { getYearsByRange } from '../utils/getYearsByRange';
 
-
-
 import { Line } from 'react-chartjs-2';
 import { CustomSelect } from './CustomSelect';
-
+import { useState } from 'react';
 
 ChartJS.register(
   CategoryScale,
@@ -42,25 +40,24 @@ export const options = {
   },
 };
 
-
-
-
 export const UsersYearCountry = () => {
 
+  const [country, setCountry] = useState('Chile');
+
   const countries = useCountries();
-  const dataByCountry = useDataByCountry('Argentina');
-  // console.log('data',dataByCountry)
-
+  const dataByCountry = useDataByCountry(country);
   const internetUsersNumber = dataByCountry.map((item) => item.data.internet_users_number)
-  console.log('internetUsersNumber', internetUsersNumber)
-
   const years = getYearsByRange(1980, 2020)
+ 
+  const handleChange = (value) => {
+    setCountry(value);
+  };
 
   const data = {
     labels: years,
     datasets: [
       {
-        label: 'Argentina',
+        label: country,
         data: internetUsersNumber,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -68,10 +65,9 @@ export const UsersYearCountry = () => {
     ],
   };
 
-
   return (
     <>
-      <CustomSelect options={countries} title={'Country'} />
+      <CustomSelect options={countries} title={'Country'} callback={handleChange}/>
       <Line options={options} data={data} />
     </>
 

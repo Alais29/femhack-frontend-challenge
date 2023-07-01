@@ -5,7 +5,7 @@ import { UsersYearCountry } from './components/UsersYearCountry'
 export const App = () => {
   return (
     <>
-      {/* <UsersYear /> */}
+      <UsersYear />
       <UsersYearCountry />
     </>
   )

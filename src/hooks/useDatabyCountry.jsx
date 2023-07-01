@@ -13,7 +13,7 @@ const useDataByCountry = (country) => {
             setData(formatedData);
         }
         getAllDataByCountry();
-    }, []);
+    }, [country]);
     return data;
 }
 
