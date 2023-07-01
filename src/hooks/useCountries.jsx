@@ -1,21 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 import { getCountries } from "../services/getCountries"
 
 const useCountries = () => {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState([])
 
   useEffect(() => {
-
     const getAllCountries = async () => {
       const countries = await getCountries()
-      setCountries(countries);
+      setCountries(countries)
     }
 
-    getAllCountries();
-  }, []);
+    getAllCountries()
+  }, [])
 
-  return countries;
-};
+  return countries
+}
 
-export default useCountries;
+export default useCountries

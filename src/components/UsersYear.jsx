@@ -1,4 +1,4 @@
-import { getYearsByRange } from "../utils/getYearsByRange"
+import { getYearsByRange } from '../utils/getYearsByRange'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,23 +7,16 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import { useUsersByYear } from "../hooks/useUsersByYear";
+} from 'chart.js'
+import { Bar } from 'react-chartjs-2'
+import { useUsersByYear } from '../hooks/useUsersByYear'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export const UsersYear = () => {
   const years = getYearsByRange(1980, 2020)
   const data = useUsersByYear(years)
-  
+
   const options = {
     responsive: true,
     plugins: {
@@ -35,7 +28,7 @@ export const UsersYear = () => {
         text: 'Internet Users By Year',
       },
     },
-  };
+  }
 
   const chartData = {
     labels: years,
@@ -46,9 +39,7 @@ export const UsersYear = () => {
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
     ],
-  };
-  
-  return (
-    <Bar options={options} data={chartData} />
-  )
+  }
+
+  return <Bar options={options} data={chartData} />
 }
