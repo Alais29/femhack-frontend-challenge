@@ -42,7 +42,7 @@ export const options = {
 
 export const UsersYearCountry = () => {
 
-  const [country, setCountry] = useState('Chile');
+  const [country, setCountry] = useState('United States');
 
   const countries = useCountries();
   const dataByCountry = useDataByCountry(country);
