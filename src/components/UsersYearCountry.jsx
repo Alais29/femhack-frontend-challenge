@@ -68,7 +68,12 @@ export const UsersYearCountry = () => {
 
   return (
     <>
-      <CustomSelect options={countries} title={'Country'} callback={handleChange} selectedOption={country}/>
+      <CustomSelect
+        options={countries}
+        title={'Country'}
+        callback={handleChange}
+        selectedOption={country}
+      />
       <Line options={options} data={data} />
     </>
   )
