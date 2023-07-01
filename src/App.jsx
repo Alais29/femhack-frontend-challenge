@@ -1,8 +1,10 @@
 import './App.css'
-import { TopCountries } from './components/TopCountries'
-import CustomTabs from './components/Layout/CustomTabs'
-import { UsersYear } from './components/UsersYear'
-import { UsersYearCountry } from './components/UsersYearCountry'
+import { TopCountries } from './components/charts/TopCountries'
+import { UsersYear } from './components/charts/UsersYear'
+import { UsersYearCountry } from './components/charts/UsersYearCountry'
+
+import CustomTabs from './components/layout/CustomTabs'
+
 
 export const App = () => {
   return (

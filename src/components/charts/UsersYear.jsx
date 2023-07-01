@@ -1,4 +1,4 @@
-import { getYearsByRange } from '../utils/getYearsByRange'
+import { getYearsByRange } from '../../utils/getYearsByRange'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,7 +9,7 @@ import {
   Legend,
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
-import { useUsersByYear } from '../hooks/useUsersByYear'
+import { useUsersByYear } from '../../hooks/useUsersByYear'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
