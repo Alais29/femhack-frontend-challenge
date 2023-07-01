@@ -1,7 +1,7 @@
 import './App.css'
-import { TopCountries } from './components/Charts/TopCountries'
-import { UsersYear } from './components/Charts/UsersYear'
-import { UsersYearCountry } from './components/Charts/UsersYearCountry'
+import { TopCountries } from './components/charts/TopCountries'
+import { UsersYear } from './components/charts/UsersYear'
+import { UsersYearCountry } from './components/charts/UsersYearCountry'
 
 import CustomTabs from './components/Layout/CustomTabs'
 
