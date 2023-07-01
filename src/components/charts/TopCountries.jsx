@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
-import { CustomSelect } from './CustomSelect'
-import { getYearsByRange } from '../utils/getYearsByRange'
-import { useCountryDataByYear } from '../hooks/useContryDataByYear'
+import { CustomSelect } from '../common/CustomSelect'
+import { getYearsByRange } from '../../utils/getYearsByRange'
+import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 

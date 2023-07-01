@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import useCountries from '../hooks/useCountries'
-import useDataByCountry from '../hooks/useDatabyCountry'
+import useCountries from '../../hooks/useCountries'
+import useDataByCountry from '../../hooks/useDatabyCountry'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,10 +11,10 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
-import { getYearsByRange } from '../utils/getYearsByRange'
+import { getYearsByRange } from '../../utils/getYearsByRange'
 import { Line } from 'react-chartjs-2'
-import { CustomSelect } from './CustomSelect'
-import useAnimation from '../hooks/useAnimation'
+import { CustomSelect } from '../common/CustomSelect'
+import useAnimation from '../../hooks/useAnimation'
 
 ChartJS.register(
   CategoryScale,
