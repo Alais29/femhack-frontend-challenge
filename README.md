@@ -1,6 +1,7 @@
-# React Vite Boilerplate ✨
+# FemHack FrontEnd Challenge 
+## React Divas Team✨
 
-> This is a boilerplate project for starting React applications with Vite.
+> Challenge from Frontend femhack challenge by nuwe June 2023
 
 Technologies used 👇:
 
@@ -8,9 +9,6 @@ Technologies used 👇:
 <img alt="react badge" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
  </span>
 <span> 
-<span>
-<img alt="react router badge" src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
- </span>
 <span> 
 <img alt="vite badge" src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" />
 </span>
@@ -65,8 +63,5 @@ Technologies used 👇:
 
 ## Author
 
-👤 **Leslie Herrera**
-
-* Twitter: [@dereemii](https://twitter.com/dereemii)
-* Github: [@Dereemii](https://github.com/Dereemii)
-* LinkedIn: [@dereemii](https://linkedin.com/in/dereemii)
+👤 **Alfonsina Lizardo** Github: [@Alais29](https://github.com/Alais29)
+👤 **Leslie Herrera** Github: [@Dereemii](https://github.com/Dereemii)
