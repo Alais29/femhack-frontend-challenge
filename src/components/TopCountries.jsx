@@ -57,7 +57,7 @@ export const TopCountries = () => {
       {!loading && !error && data.length === 0 ? (
         <p>There is no data available</p>
       ) : (
-        <Pie data={chartData} />
+        <Pie data={chartData} key={year} />
       )}
     </>
   )
