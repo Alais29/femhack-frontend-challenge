@@ -13,6 +13,7 @@ export const App = () => {
           <img src={reactLogo} className='logo react' alt='React logo' />
         </a>
       </div>
+      <h1>It works and you found me!</h1>
       <h1>Vite + React BoilerPlate ✨</h1>
     </>
   )
