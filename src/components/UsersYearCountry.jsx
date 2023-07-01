@@ -1,5 +1,5 @@
-import useCountries from '../hooks/useCountries';
-import useDataByCountry from '../hooks/useDatabyCountry';
+import useCountries from '../hooks/useCountries'
+import useDataByCountry from '../hooks/useDatabyCountry'
 
 import {
   Chart as ChartJS,
@@ -10,12 +10,12 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { getYearsByRange } from '../utils/getYearsByRange';
+} from 'chart.js'
+import { getYearsByRange } from '../utils/getYearsByRange'
 
-import { Line } from 'react-chartjs-2';
-import { CustomSelect } from './CustomSelect';
-import { useState } from 'react';
+import { Line } from 'react-chartjs-2'
+import { CustomSelect } from './CustomSelect'
+import { useState } from 'react'
 
 ChartJS.register(
   CategoryScale,
@@ -24,8 +24,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
-);
+  Legend,
+)
 
 export const options = {
   responsive: true,
@@ -38,20 +38,21 @@ export const options = {
       text: 'Chart.js Line Chart',
     },
   },
-};
+}
 
 export const UsersYearCountry = () => {
+  const [country, setCountry] = useState('United States')
 
-  const [country, setCountry] = useState('United States');
-
-  const countries = useCountries();
-  const dataByCountry = useDataByCountry(country);
-  const internetUsersNumber = dataByCountry.map((item) => item.data.internet_users_number)
+  const countries = useCountries()
+  const dataByCountry = useDataByCountry(country)
+  const internetUsersNumber = dataByCountry.map(
+    (item) => item.data.internet_users_number,
+  )
   const years = getYearsByRange(1980, 2020)
- 
+
   const handleChange = (value) => {
-    setCountry(value);
-  };
+    setCountry(value)
+  }
 
   const data = {
     labels: years,
@@ -63,13 +64,16 @@ export const UsersYearCountry = () => {
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
     ],
-  };
+  }
 
   return (
     <>
-      <CustomSelect options={countries} title={'Country'} callback={handleChange}/>
+      <CustomSelect
+        options={countries}
+        title={'Country'}
+        callback={handleChange}
+      />
       <Line options={options} data={data} />
     </>
-
   )
 }
