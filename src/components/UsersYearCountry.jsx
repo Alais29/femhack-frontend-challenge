@@ -48,7 +48,7 @@ export const UsersYearCountry = () => {
   const dataByCountry = useDataByCountry(country);
   const internetUsersNumber = dataByCountry.map((item) => item.data.internet_users_number)
   const years = getYearsByRange(1980, 2020)
- 
+
   const handleChange = (value) => {
     setCountry(value);
   };
@@ -67,9 +67,8 @@ export const UsersYearCountry = () => {
 
   return (
     <>
-      <CustomSelect options={countries} title={'Country'} callback={handleChange}/>
+      <CustomSelect options={countries} title={'Country'} callback={handleChange} selectedOption={country}/>
       <Line options={options} data={data} />
     </>
-
   )
 }

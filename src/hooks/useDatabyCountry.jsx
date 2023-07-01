@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getDataByCountry } from '../../services/getDataByCountry';
+import { getDataByCountry } from '../services/getDataByCountry';
 
 const useDataByCountry = (country) => {
     const [data, setData] = useState([]);
