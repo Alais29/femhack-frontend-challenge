@@ -22,13 +22,12 @@ export const useUsersByYear = (years) => {
 
     Promise.all(promises)
       .then(response => {
-        console.log(response);
         setData(response);
       })
       .catch(error => {
         console.log('There was an error:', error);
       });
-  }, [years]);
+  }, []);
 
   return data;
 };
