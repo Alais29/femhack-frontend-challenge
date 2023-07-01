@@ -3,7 +3,7 @@ import { TopCountries } from './components/charts/TopCountries'
 import { UsersYear } from './components/charts/UsersYear'
 import { UsersYearCountry } from './components/charts/UsersYearCountry'
 
-import CustomTabs from './components/Layout/CustomTabs'
+import CustomTabs from './components/layout/CustomTabs'
 
 
 export const App = () => {
