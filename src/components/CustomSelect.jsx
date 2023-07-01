@@ -6,8 +6,8 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 
-export const CustomSelect = ({ options, title, callback }) => {
-  const [value, setValue] = useState('')
+export const CustomSelect = ({ options, title, callback, selectedOption }) => {
+  const [value, setValue] = useState(selectedOption)
 
   const handleChange = (event) => {
     setValue(event.target.value)
@@ -40,4 +40,5 @@ CustomSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
+  selectedOption: PropTypes.string.isRequired,
 }

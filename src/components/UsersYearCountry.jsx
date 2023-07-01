@@ -72,6 +72,7 @@ export const UsersYearCountry = () => {
         options={countries}
         title={'Country'}
         callback={handleChange}
+        selectedOption={country}
       />
       <Line options={options} data={data} />
     </>

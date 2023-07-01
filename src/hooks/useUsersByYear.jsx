@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getUsersXYear } from '../../services/getUsersXYear'
+import { getUsersXYear } from '../services/getUsersXYear'
 
 /**
  * Takes an array of years as input and returns a state variable `data` that holds
