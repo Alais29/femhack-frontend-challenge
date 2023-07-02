@@ -1,24 +1,18 @@
 import WorldMap from 'react-svg-worldmap'
 import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
+import { countriestLds } from '../../assets/countryCodes'
 
 export const CustomWorldMap = () => {
   const { data, loading, error } = useCountryDataByYear(2020)
 
-  const countryCodeMapping = {
-    China: 'cn',
-    India: 'in',
-    'United States': 'us',
-    Indonesia: 'id',
-    Japan: 'jp',
-    Brazil: 'br',
-    Germany: 'de',
-    Egypt: 'eg',
-    Russia: 'ru',
-    Mexico: 'mx',
-  }
-
+  let countriesCodes = {}
   const countryData = data.map((item) => {
-    const countryCode = countryCodeMapping[item.country]
+    countriestLds.forEach(country => {
+      if (country.country === item.country) {
+        countriesCodes[item.country] = country.tlds[0].replace('.', '')
+      }
+    })
+    const countryCode = countriesCodes[ item.country ]
     return {
       country: countryCode,
       value: item.users,
