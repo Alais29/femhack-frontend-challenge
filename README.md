@@ -24,6 +24,23 @@ Technologies used 👇:
 <span>
 <img alt="stylelint badge" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
 </span>
+ <span>
+<img alt="react chart js badge" src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" />
+ </span>
+ <span>
+<img alt="world map svg badge" src="https://img.shields.io/badge/worldMapSVG-238636?style=for-the-badge&logo=world&logoColor=white" />
+ </span>
+  <span>
+<img alt="material ui badge" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" />
+ </span>
+  <span>
+<img alt="css badge" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+ </span>
+ <span> 
+<img alt="vitest badge" src="https://img.shields.io/badge/Vitest-B73BFE?style=for-the-badge&logo=vitest&logoColor=FFD62E" />
+</span>
+ 
+
 
 ## Prerequisites
 Make sure you have the following software installed on your machine:
