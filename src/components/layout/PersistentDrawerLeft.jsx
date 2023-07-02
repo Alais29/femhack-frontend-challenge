@@ -159,7 +159,7 @@ export default function PersistentDrawerLeft() {
                 alignItems: 'center',
               }}
             >
-              <img src={logo} alt='logo' style={{ width: '50px' }} />
+              <img src={logo} alt='logo' style={{ width: '50px', height: '50px' }} />
               <a href='https://github.com/Alais29/femhack-frontend-challenge'>
                 <Typography variant='caption' noWrap component='div'>
                   React Divas - FemHack
@@ -167,7 +167,7 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
                     />
                   </span>
                 </Typography>
@@ -180,7 +180,7 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
                     />
                   </span>
                 </Typography>
@@ -192,7 +192,7 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
                     />
                   </span>
                 </Typography>
