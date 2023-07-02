@@ -1,4 +1,4 @@
-import { countriestLds } from '../assets/countryCodes.js'
+import { countriestLds } from '../utils/countryCodes.js'
 
 /**
  * The function getCountriesWithCode takes an array of country names and returns an array of objects

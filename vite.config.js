@@ -17,7 +17,7 @@ export default ({ mode }) => {
     test: {
       environment: 'jsdom',
       globals: true,
-      setupFiles: ['./src/setupTest.js'],
+      setupFiles: ['./src/test/setupTest.js'],
       testMatch: ['./tests/**/*.test.jsx'],
     },
     alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],

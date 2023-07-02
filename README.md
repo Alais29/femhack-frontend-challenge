@@ -80,7 +80,42 @@ API_URL=backend API URL
 - To check for stylelint errors in stylesheets, run `npm run lint:styles`.
 - To automatically fix stylelint errors in stylesheets, run `npm run fix:styles`.
 
-
+## Folders Sctructure
+```
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📜chevronLeft.svg
+ ┃ ┣ 📜countryCodes.js
+ ┃ ┣ ..
+ ┣ 📂components
+ ┃ ┣ 📂charts
+ ┃ ┃ ┣ 📜TopCountries.jsx
+ ┃ ┃ ┣ 📜UsersYear.jsx
+ ┃ ┃ ┣ ...
+ ┃ ┣ 📂common
+ ┃ ┃ ┗ 📜CustomSelect.jsx
+ ┃ ┗ 📂layout
+ ┃ ┃ ┗ 📜PersistentDrawerLeft.jsx
+ ┣ 📂hooks
+ ┃ ┣ 📜useAnimation.jsx
+ ┃ ┣ 📜useContryDataByYear.jsx
+ ┃ ┣ 📜useCountries.jsx
+ ┃ ┣ 📜...
+ ┣ 📂services
+ ┃ ┣ 📜baseUrl.js
+ ┃ ┣ 📜getCountries.js
+ ┃ ┣ ..
+ ┣ 📂test
+ ┃ ┗ 📜App.test.jsx
+ ┃ ┗ ...
+ ┣ 📂utils
+ ┃ ┣ 📜getCountriesWithCode.js
+ ┃ ┗ ..
+ ┣ 📜App.css
+ ┣ 📜App.jsx
+ ┣ 📜main.jsx
+ ┗ 📜setupTest.js
+```
 ## Dependencies
 
 - [react](https://www.npmjs.com/package/react): ^18.2.0
