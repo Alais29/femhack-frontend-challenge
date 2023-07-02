@@ -18,6 +18,7 @@ import { UsersYearCountry } from '../charts/UsersYearCountry'
 import { UsersYear } from '../charts/UsersYear'
 import { TopCountries } from '../charts/TopCountries'
 import { CustomWorldMap } from '../charts/WorldMap'
+import  logo  from '../../assets/logo.png'
 
 const drawerWidth = 240
 
@@ -96,8 +97,13 @@ export default function PersistentDrawerLeft() {
               style={{ width: '30px', height: '30px' }}
             />
           </IconButton>
-          <Typography variant='h6' noWrap component='div'>
-            React Divas - Femhack Frontend Challenge
+          <Typography variant='h6' noWrap component='h1'>
+            React Divas  
+            <img
+              src={logo}
+              alt='Chevron Left'
+              style={{ width: '35px', height: '35px' }}
+            /> - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
@@ -131,9 +137,9 @@ export default function PersistentDrawerLeft() {
             'Top 10 Countries',
             'World Map',
           ].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={text} disablePadding >
               <ListItemButton onClick={() => setSelected(index)}>
-                <ListItemText primary={text} />
+                <ListItemText  primary={text} />
               </ListItemButton>
             </ListItem>
           ))}
