@@ -27,8 +27,9 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
         >
           {options.map((item) => (
             <MenuItem key={item.id} value={item.name}>
-              {item.name}
-              {item.image && <Box component="span" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} >
+              {item.image && 
+              <Box component="span" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} >
+                
                 <img
                   loading="lazy"
                   width="20"
@@ -37,7 +38,8 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
                   alt={`image of ${item.name}`}
                 />
               </Box>}
-
+               {''}
+              {item.name}
             </MenuItem>
           ))}
         </Select>
