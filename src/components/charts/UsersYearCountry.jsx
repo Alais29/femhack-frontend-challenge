@@ -26,7 +26,7 @@ ChartJS.register(
   Legend,
 )
 
-export const options = {
+const options = {
   responsive: true,
   plugins: {
     legend: {
@@ -42,9 +42,9 @@ export const options = {
 export const UsersYearCountry = () => {
   const [country, setCountry] = useState('United States')
 
-  const countries = useCountries()
-  const dataByCountry = useDataByCountry(country)
-  const internetUsersNumber = dataByCountry.map(
+  const { countries, loading: countriesLoading, error: countriesError } = useCountries()
+  const { data, loading, error } = useDataByCountry(country)
+  const internetUsersNumber = data.map(
     (item) => item.data.internet_users_number,
   )
   const years = getYearsByRange(1980, 2020)
@@ -56,7 +56,7 @@ export const UsersYearCountry = () => {
     setCurrentYear(1980)
   }
 
-  const data = {
+  const chartData = {
     labels: years.slice(0, currentYear - 1980 + 1),
     datasets: [
       {
@@ -70,13 +70,28 @@ export const UsersYearCountry = () => {
 
   return (
     <>
-      <CustomSelect
-        options={countries}
-        title={'Country'}
-        callback={handleChange}
-        selectedOption={country}
-      />
-      <Line options={options} data={data} />
+      {countriesLoading && <p>Loading...</p>}
+      {countriesError && <p>There was an error loading the data</p>}
+      {countries.length === 0 && !countriesLoading && !countriesError ? (
+        <p>There is no data available</p>
+      ) : null}
+      {!countriesLoading && !countriesError && countries.length > 0 && (
+        <CustomSelect
+          options={countries}
+          title={'Country'}
+          callback={handleChange}
+          selectedOption={country}
+        />)
+      }
+
+      {loading && <p>Loading...</p>}
+      {error && <p>There was an error loading the data</p>}
+      {data.length === 0 && !loading && !error ? (
+        <p>There is no data available</p>
+      ) : null}
+      {!loading && !error && data.length > 0 && (
+        <Line options={options} data={chartData} />
+      )}
     </>
   )
 }

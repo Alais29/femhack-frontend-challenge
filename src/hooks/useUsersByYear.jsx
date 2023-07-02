@@ -8,6 +8,8 @@ import { getUsersXYear } from '../services/getUsersXYear'
  */
 export const useUsersByYear = (years) => {
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     const ApiCallPromise = (year) => {
@@ -30,8 +32,10 @@ export const useUsersByYear = (years) => {
       })
       .catch((error) => {
         console.log('There was an error:', error)
+        setError(error)
       })
+      .finally(() => setLoading(false))
   }, [])
 
-  return data
+  return { data, loading, error }
 }
