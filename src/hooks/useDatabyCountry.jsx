@@ -41,7 +41,7 @@ const useDataByCountry = (country) => {
     }
   }, [country])
 
-  return {data, loading, error}
+  return { data, loading, error }
 }
 
 export default useDataByCountry

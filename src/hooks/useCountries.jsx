@@ -21,7 +21,7 @@ const useCountries = () => {
     }
   }, [])
 
-  return {countries, loading, error}
+  return { countries, loading, error }
 }
 
 export default useCountries
