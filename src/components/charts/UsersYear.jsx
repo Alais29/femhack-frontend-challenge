@@ -18,7 +18,7 @@ export const UsersYear = () => {
   const { data, loading, error } = useUsersByYear(years)
 
   const options = {
-    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
@@ -49,7 +49,9 @@ export const UsersYear = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <Bar options={options} data={chartData} />
+        <div className='chart-container'>
+          <Bar options={options} data={chartData} />
+        </div>
       )}
     </>
   )

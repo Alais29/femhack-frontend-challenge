@@ -37,7 +37,7 @@ export const CustomWorldMap = () => {
           color='red'
           title='Top 10 Countries with the most Internet Users in 2020'
           value-suffix='people'
-          size='xl'
+          size='responsive'
           data={countryData}
         />
       )}

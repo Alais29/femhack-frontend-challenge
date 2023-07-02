@@ -27,7 +27,7 @@ ChartJS.register(
 )
 
 const options = {
-  responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: 'top',
@@ -94,7 +94,9 @@ export const UsersYearCountry = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <Line options={options} data={chartData} />
+        <div className='chart-container'>
+          <Line options={options} data={chartData} />
+        </div>
       )}
     </>
   )
