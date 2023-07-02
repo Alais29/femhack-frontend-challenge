@@ -43,3 +43,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  width: 90%;
+}

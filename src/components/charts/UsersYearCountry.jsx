@@ -27,7 +27,7 @@ ChartJS.register(
 )
 
 const options = {
-  responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: 'top',
@@ -42,7 +42,11 @@ const options = {
 export const UsersYearCountry = () => {
   const [country, setCountry] = useState('United States')
 
-  const { countries, loading: countriesLoading, error: countriesError } = useCountries()
+  const {
+    countries,
+    loading: countriesLoading,
+    error: countriesError,
+  } = useCountries()
   const { data, loading, error } = useDataByCountry(country)
   const internetUsersNumber = data.map(
     (item) => item.data.internet_users_number,
@@ -81,8 +85,8 @@ export const UsersYearCountry = () => {
           title={'Country'}
           callback={handleChange}
           selectedOption={country}
-        />)
-      }
+        />
+      )}
 
       {loading && <p>Loading...</p>}
       {error && <p>There was an error loading the data</p>}
@@ -90,7 +94,9 @@ export const UsersYearCountry = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <Line options={options} data={chartData} />
+        <div className='chart-container'>
+          <Line options={options} data={chartData} />
+        </div>
       )}
     </>
   )
