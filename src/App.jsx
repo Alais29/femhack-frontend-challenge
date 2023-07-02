@@ -1,6 +1,12 @@
 import './App.css'
+
 import PersistentDrawerLeft from './components/layout/PersistentDrawerLeft'
+import { Container } from '@mui/material'
 
 export const App = () => {
-  return <PersistentDrawerLeft />
+  return (
+    <Container disableGutters>
+      <PersistentDrawerLeft />
+    </Container>
+  )
 }
