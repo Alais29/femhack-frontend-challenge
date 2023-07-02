@@ -98,8 +98,13 @@ export default function PersistentDrawerLeft() {
               style={{ width: '30px', height: '30px' }}
             />
           </IconButton>
-          <Typography variant='h6' noWrap component='div'>
-            React Divas - Femhack Frontend Challenge
+          <Typography variant='h6' noWrap component='h1'>
+            React Divas  
+            <img
+              src={logo}
+              alt='Chevron Left'
+              style={{ width: '35px', height: '35px' }}
+            /> - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
