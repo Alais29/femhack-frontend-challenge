@@ -18,6 +18,7 @@ import { UsersYearCountry } from '../charts/UsersYearCountry'
 import { UsersYear } from '../charts/UsersYear'
 import { TopCountries } from '../charts/TopCountries'
 import { CustomWorldMap } from '../charts/WorldMap'
+import  logo  from '../../assets/logo.png'
 
 const drawerWidth = 240
 
@@ -97,7 +98,12 @@ export default function PersistentDrawerLeft() {
             />
           </IconButton>
           <Typography variant='h6' noWrap component='div'>
-            React Divas - Femhack Frontend Challenge
+            React Divas  
+            <img
+              src={logo}
+              alt='Chevron Left'
+              style={{ width: '35px', height: '35px' }}
+            /> - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
