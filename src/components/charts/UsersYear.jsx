@@ -15,7 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export const UsersYear = () => {
   const years = getYearsByRange(1980, 2020)
-  const data = useUsersByYear(years)
+  const { data, loading, error } = useUsersByYear(years)
 
   const options = {
     responsive: true,
@@ -41,5 +41,16 @@ export const UsersYear = () => {
     ],
   }
 
-  return <Bar options={options} data={chartData} />
+  return (
+    <>
+      {loading && <p>Loading...</p>}
+      {error && <p>There was an error loading the data</p>}
+      {data.length === 0 && !loading && !error ? (
+        <p>There is no data available</p>
+      ) : null}
+      {!loading && !error && data.length > 0 && (
+        <Bar options={options} data={chartData} />
+      )}
+    </>
+  )
 }

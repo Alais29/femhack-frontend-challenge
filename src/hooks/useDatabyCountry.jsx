@@ -3,6 +3,8 @@ import { getDataByCountry } from '../services/getDataByCountry'
 
 const useDataByCountry = (country) => {
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     const getAllDataByCountry = async () => {
@@ -29,12 +31,17 @@ const useDataByCountry = (country) => {
       }))
 
       setData(formatedData)
+      setLoading(false)
     }
-
-    getAllDataByCountry()
+    try {
+      getAllDataByCountry()
+    } catch (error) {
+      setError(error)
+      setLoading(false)
+    }
   }, [country])
 
-  return data
+  return {data, loading, error}
 }
 
 export default useDataByCountry

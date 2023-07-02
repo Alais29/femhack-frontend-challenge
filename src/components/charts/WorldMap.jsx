@@ -27,14 +27,20 @@ export const CustomWorldMap = () => {
 
   return (
     <>
-      <div>Map</div>
-      <WorldMap
-        color="red"
-        title="Top 10 Populous Countries"
-        value-suffix="people"
-        size="lg"
-        data={countryData}
-      />
+      {loading && <p>Loading...</p>}
+      {error && <p>There was an error loading the data</p>}
+      {data.length === 0 && !loading && !error ? (
+        <p>There is no data available</p>
+      ) : null}
+      {!loading && !error && data.length > 0 && (
+        <WorldMap
+          color="red"
+          title="Top 10 Countries with the most Internet Users in 2020"
+          value-suffix="people"
+          size="xl"
+          data={countryData}
+        />
+      )}
     </>
   )
 }
