@@ -1,4 +1,6 @@
-[
+// Information about country codes obtained from : https://gist.github.com/derlin/421d2bb55018a1538271227ff6b1299d#file-country-codes-tlds-json
+// tlds : top level domains
+export const countriestLds = [
   {
     "country": "Afghanistan",
     "tlds": [
@@ -266,7 +268,7 @@
     ]
   },
   {
-    "country": "Cape Verde (in Portuguese: Cabo Verde)",
+    "country": "Cape Verde",
     "tlds": [
       ".cv"
     ]
@@ -302,7 +304,7 @@
     ]
   },
   {
-    "country": "China, People’s Republic of",
+    "country": "China",
     "tlds": [
       ".cn"
     ]
@@ -332,13 +334,13 @@
     ]
   },
   {
-    "country": "Congo, Democratic Republic of the (Congo-Kinshasa)",
+    "country": "Democratic Republic of Congo",
     "tlds": [
       ".cd"
     ]
   },
   {
-    "country": "Congo, Republic of the (Congo-Brazzaville)",
+    "country": "Congo",
     "tlds": [
       ".cg"
     ]
@@ -356,7 +358,7 @@
     ]
   },
   {
-    "country": "Côte d’Ivoire (Ivory Coast)",
+    "country": "Cote d'Ivoire",
     "tlds": [
       ".ci"
     ]
@@ -374,7 +376,7 @@
     ]
   },
   {
-    "country": "Curaçao",
+    "country": "Curacao",
     "tlds": [
       ".cw"
     ]
@@ -386,7 +388,7 @@
     ]
   },
   {
-    "country": "Czechia (Czech Republic)",
+    "country": "Czechia",
     "tlds": [
       ".cz"
     ]
@@ -416,7 +418,7 @@
     ]
   },
   {
-    "country": "East Timor (Timor-Leste)",
+    "country": "Timor",
     "tlds": [
       ".tl",
       ".tp"
@@ -483,7 +485,7 @@
     ]
   },
   {
-    "country": "Federated States of Micronesia",
+    "country": "Micronesia (country)",
     "tlds": [
       ".fm"
     ]
@@ -525,7 +527,7 @@
     ]
   },
   {
-    "country": "Gabon (officially: Gabonese Republic)",
+    "country": "Gabon",
     "tlds": [
       ".ga"
     ]
@@ -825,13 +827,13 @@
     ]
   },
   {
-    "country": "Macau",
+    "country": "Macao",
     "tlds": [
       ".mo"
     ]
   },
   {
-    "country": "Macedonia, Republic of (the former Yugoslav Republic of Macedonia, FYROM)",
+    "country": "North Macedonia",
     "tlds": [
       ".mk"
     ]
@@ -1221,7 +1223,7 @@
     ]
   },
   {
-    "country": "São Tomé and Príncipe",
+    "country": "Sao Tome and Principe",
     "tlds": [
       ".st"
     ]
@@ -1271,7 +1273,7 @@
     ]
   },
   {
-    "country": "Sint Maarten",
+    "country": "Sint Maarten (Dutch part)",
     "tlds": [
       ".sx",
       ".an"
@@ -1362,7 +1364,7 @@
     ]
   },
   {
-    "country": "Swaziland",
+    "country": "Eswatini",
     "tlds": [
       ".sz"
     ]
@@ -1428,7 +1430,7 @@
     ]
   },
   {
-    "country": "Trinidad & Tobago",
+    "country": "Trinidad and Tobago",
     "tlds": [
       ".tt"
     ]
@@ -1476,19 +1478,19 @@
     ]
   },
   {
-    "country": "United Arab Emirates (UAE)",
+    "country": "United Arab Emirates",
     "tlds": [
       ".ae"
     ]
   },
   {
-    "country": "United Kingdom (UK)",
+    "country": "United Kingdom",
     "tlds": [
-      ".uk"
+      ".gb"
     ]
   },
   {
-    "country": "United States of America (USA)",
+    "country": "United States",
     "tlds": [
       ".us"
     ]

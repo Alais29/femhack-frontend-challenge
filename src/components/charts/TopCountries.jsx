@@ -9,6 +9,8 @@ import { Container } from '@mui/material'
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export const TopCountries = () => {
+
+
   const [year, setYear] = useState(2020)
   const { data, loading, error } = useCountryDataByYear(year)
 

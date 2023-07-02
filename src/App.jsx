@@ -3,13 +3,14 @@ import { TopCountries } from './components/charts/TopCountries'
 import { UsersYear } from './components/charts/UsersYear'
 import { UsersYearCountry } from './components/charts/UsersYearCountry'
 import { CustomWorldMap } from './components/charts/WorldMap'
-
-
+import CountrySelect from './components/common/CountrySelect'
 import CustomTabs from './components/layout/CustomTabs'
 
 
 export const App = () => {
   return (
+    <>
+    <CountrySelect/>
     <CustomTabs
       options={[
         <UsersYear key={0} />,
@@ -19,5 +20,6 @@ export const App = () => {
       ]}
       title={['Users x Year', 'Users x Year x Country', 'Top 10 Countries', 'World Map']}
     />
+    </>
   )
 }
