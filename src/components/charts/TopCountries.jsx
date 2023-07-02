@@ -4,6 +4,7 @@ import { Pie } from 'react-chartjs-2'
 import { CustomSelect } from '../common/CustomSelect'
 import { getYearsByRange } from '../../utils/getYearsByRange'
 import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
+import { Container } from '@mui/material'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -57,7 +58,9 @@ export const TopCountries = () => {
       {!loading && !error && data.length === 0 ? (
         <p>There is no data available</p>
       ) : (
-        <Pie data={chartData} key={year} />
+        <Container maxWidth="sm">
+          <Pie data={chartData} key={year} />
+        </Container>
       )}
     </>
   )
