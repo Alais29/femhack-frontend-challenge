@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
 import { getDataByCountry } from '../services/getDataByCountry'
 
+/**
+ * Custom hook that fetches and formats data for a specific returning the data, loading state, and error state.
+ * @param country - string, The country to fetch data for.
+ * @returns An object with three properties: `data`, `loading`, and `error`.
+ */
 const useDataByCountry = (country) => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)

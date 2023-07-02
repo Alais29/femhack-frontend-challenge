@@ -53,7 +53,7 @@ export const UsersYearCountry = () => {
   )
   const years = getYearsByRange(1980, 2020)
 
-  const { currentYear, setCurrentYear } = useAnimation(country)
+  const { currentYear, setCurrentYear } = useAnimation()
 
   const handleChange = (value) => {
     setCountry(value)
