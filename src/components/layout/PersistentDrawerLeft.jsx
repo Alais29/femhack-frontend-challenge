@@ -97,7 +97,7 @@ export default function PersistentDrawerLeft() {
               style={{ width: '30px', height: '30px' }}
             />
           </IconButton>
-          <Typography variant='h6' noWrap component='div'>
+          <Typography variant='h6' noWrap component='h1'>
             React Divas  
             <img
               src={logo}
@@ -137,9 +137,9 @@ export default function PersistentDrawerLeft() {
             'Top 10 Countries',
             'World Map',
           ].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={text} disablePadding >
               <ListItemButton onClick={() => setSelected(index)}>
-                <ListItemText primary={text} />
+                <ListItemText  primary={text} />
               </ListItemButton>
             </ListItem>
           ))}
