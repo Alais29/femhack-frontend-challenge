@@ -9,8 +9,6 @@ import { Container } from '@mui/material'
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export const TopCountries = () => {
-
-
   const [year, setYear] = useState(2020)
   const { data, loading, error } = useCountryDataByYear(year)
 
@@ -60,7 +58,7 @@ export const TopCountries = () => {
       {!loading && !error && data.length === 0 ? (
         <p>There is no data available</p>
       ) : (
-        <Container maxWidth="sm">
+        <Container maxWidth='sm'>
           <Pie data={chartData} key={year} />
         </Container>
       )}

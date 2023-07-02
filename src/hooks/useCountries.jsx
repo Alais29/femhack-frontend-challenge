@@ -10,7 +10,6 @@ const useCountries = () => {
 
   useEffect(() => {
     const getAllCountries = async () => {
-
       const countries = await getCountries()
       const countriesFormated = getCountriesWithCode(countries)
       setCountries(countriesFormated)
@@ -24,7 +23,7 @@ const useCountries = () => {
     }
   }, [])
 
-  return {countries, loading, error}
+  return { countries, loading, error }
 }
 
 export default useCountries

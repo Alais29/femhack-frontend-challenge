@@ -16,7 +16,6 @@ import { Line } from 'react-chartjs-2'
 import { CustomSelect } from '../common/CustomSelect'
 import useAnimation from '../../hooks/useAnimation'
 
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -43,7 +42,11 @@ const options = {
 export const UsersYearCountry = () => {
   const [country, setCountry] = useState('Chile')
 
-  const { countries, loading: countriesLoading, error: countriesError } = useCountries()
+  const {
+    countries,
+    loading: countriesLoading,
+    error: countriesError,
+  } = useCountries()
   const { data, loading, error } = useDataByCountry(country)
   const internetUsersNumber = data.map(
     (item) => item.data.internet_users_number,
@@ -82,8 +85,8 @@ export const UsersYearCountry = () => {
           title={'Country'}
           callback={handleChange}
           selectedOption={country}
-        />)
-      }
+        />
+      )}
 
       {loading && <p>Loading...</p>}
       {error && <p>There was an error loading the data</p>}

@@ -1,29 +1,29 @@
-import WorldMap from "react-svg-worldmap";
-import { useCountryDataByYear } from "../../hooks/useContryDataByYear";
+import WorldMap from 'react-svg-worldmap'
+import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
 
 export const CustomWorldMap = () => {
   const { data, loading, error } = useCountryDataByYear(2020)
 
   const countryCodeMapping = {
-    'China': 'cn',
-    'India': 'in',
+    China: 'cn',
+    India: 'in',
     'United States': 'us',
-    'Indonesia': 'id',
-    'Japan': 'jp',
-    'Brazil': 'br',
-    "Germany": "de",
-    "Egypt": "eg",
-    "Russia": "ru",
-    "Mexico": "mx",
+    Indonesia: 'id',
+    Japan: 'jp',
+    Brazil: 'br',
+    Germany: 'de',
+    Egypt: 'eg',
+    Russia: 'ru',
+    Mexico: 'mx',
   }
 
-  const countryData = data.map(item => {
-    const countryCode = countryCodeMapping[item.country];
+  const countryData = data.map((item) => {
+    const countryCode = countryCodeMapping[item.country]
     return {
       country: countryCode,
-      value: item.users
-    };
-  });
+      value: item.users,
+    }
+  })
 
   return (
     <>
@@ -34,10 +34,10 @@ export const CustomWorldMap = () => {
       ) : null}
       {!loading && !error && data.length > 0 && (
         <WorldMap
-          color="red"
-          title="Top 10 Countries with the most Internet Users in 2020"
-          value-suffix="people"
-          size="xl"
+          color='red'
+          title='Top 10 Countries with the most Internet Users in 2020'
+          value-suffix='people'
+          size='xl'
           data={countryData}
         />
       )}
