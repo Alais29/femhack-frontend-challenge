@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 import { getCountryDataByYear } from '../services/getCountryDataByYear'
 
+/**
+ * Custom hook that retrieves countries data for a specific year, sorts it by the number of internet users,
+ * and returns the top 10 countries with the highest number of internet users.
+ * @param year - interger, The year for which to retrieve the countries data.
+ * @returns The function `useCountryDataByYear` returns an object with three properties: `data`,
+ * `loading`, and `error`.
+ */
 export const useCountryDataByYear = (year) => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)

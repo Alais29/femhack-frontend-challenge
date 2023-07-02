@@ -18,6 +18,8 @@ import { UsersYearCountry } from '../charts/UsersYearCountry'
 import { UsersYear } from '../charts/UsersYear'
 import { TopCountries } from '../charts/TopCountries'
 import { CustomWorldMap } from '../charts/WorldMap'
+import logo from '../../assets/logo.png'
+import github from '../../assets/github-logo.png'
 
 const drawerWidth = 240
 
@@ -96,8 +98,13 @@ export default function PersistentDrawerLeft() {
               style={{ width: '30px', height: '30px' }}
             />
           </IconButton>
-          <Typography variant='h6' noWrap component='div'>
-            React Divas - Femhack Frontend Challenge
+          <Typography variant='h6' noWrap component='h1'>
+            React Divas  
+            <img
+              src={logo}
+              alt='Chevron Left'
+              style={{ width: '35px', height: '35px' }}
+            /> - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
@@ -114,30 +121,85 @@ export default function PersistentDrawerLeft() {
         anchor='left'
         open={open}
       >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            <img
-              src={ChevronLeft}
-              alt='Chevron Left'
-              style={{ width: '30px', height: '30px' }}
-            />
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {[
-            'Users x Year',
-            'Users x Year x Country',
-            'Top 10 Countries',
-            'World Map',
-          ].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton onClick={() => setSelected(index)}>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        <Box className='drawer-container'>
+          <Box>
+            <DrawerHeader>
+              <IconButton onClick={handleDrawerClose}>
+                <img
+                  src={ChevronLeft}
+                  alt='Chevron Left'
+                  style={{ width: '30px', height: '30px' }}
+                />
+              </IconButton>
+            </DrawerHeader>
+            <Divider />
+            <List>
+              {[
+                'Users x Year',
+                'Users x Year x Country',
+                'Top 10 Countries',
+                'World Map',
+              ].map((text, index) => (
+                <ListItem key={text} disablePadding>
+                  <ListItemButton onClick={() => setSelected(index)}>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+
+          <Box sx={{ color: '#42a5f5' }}>
+            <Divider />
+            <Box
+              sx={{
+                padding: '0.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <img src={logo} alt='logo' style={{ width: '50px' }} />
+              <a href='https://github.com/Alais29/femhack-frontend-challenge'>
+                <Typography variant='caption' noWrap component='div'>
+                  React Divas - FemHack
+                  <span>
+                    <img
+                      src={github}
+                      alt='github'
+                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                    />
+                  </span>
+                </Typography>
+              </a>
+
+              <a href='https://github.com/Alais29'>
+                <Typography variant='caption' noWrap component='div'>
+                  Alfonsina Lizardo
+                  <span>
+                    <img
+                      src={github}
+                      alt='github'
+                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                    />
+                  </span>
+                </Typography>
+              </a>
+              <a href='https://github.com/Dereemii'>
+                <Typography variant='caption' noWrap component='div'>
+                  Leslie Herrera
+                  <span>
+                    <img
+                      src={github}
+                      alt='github'
+                      style={{ width: '15px', marginLeft: '0.5rem' }}
+                    />
+                  </span>
+                </Typography>
+              </a>
+            </Box>
+          </Box>
+        </Box>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

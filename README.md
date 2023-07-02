@@ -1,5 +1,8 @@
 # FemHack FrontEnd Challenge 
-## React Divas Team✨
+<h2>React Divas Team✨</h2> 
+
+<img alt="react badge" src="src/assets/logo.png" />
+
 
 > Challenge from Frontend femhack challenge by nuwe June 2023
 
