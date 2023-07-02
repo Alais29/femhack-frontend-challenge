@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { getCountries } from '../services/getCountries'
+import { getCountriesWithCode } from '../utils/getCountriesWithCode'
 
 const useCountries = () => {
   const [countries, setCountries] = useState([])
@@ -10,7 +11,8 @@ const useCountries = () => {
   useEffect(() => {
     const getAllCountries = async () => {
       const countries = await getCountries()
-      setCountries(countries)
+      const countriesFormated = getCountriesWithCode(countries)
+      setCountries(countriesFormated)
       setLoading(false)
     }
     try {

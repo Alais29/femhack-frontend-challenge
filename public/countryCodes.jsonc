@@ -1,4 +1,7 @@
-[
+// Information about country codes obtained from : https://gist.github.com/derlin/421d2bb55018a1538271227ff6b1299d#file-country-codes-tlds-json
+// tlds : top level domains
+
+ [
   {
     "country": "Afghanistan",
     "tlds": [".af"]

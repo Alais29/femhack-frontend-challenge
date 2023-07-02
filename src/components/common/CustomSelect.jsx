@@ -26,8 +26,23 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
           onChange={handleChange}
         >
           {options.map((item) => (
-            <MenuItem key={item} value={item}>
-              {item}
+            <MenuItem key={item.id} value={item.name}>
+              {item.image && (
+                <Box
+                  component='span'
+                  sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+                >
+                  <img
+                    loading='lazy'
+                    width='20'
+                    src={item.image}
+                    srcSet={item.image}
+                    alt={`image of ${item.name}`}
+                  />
+                </Box>
+              )}
+              {''}
+              {item.name}
             </MenuItem>
           ))}
         </Select>
@@ -37,7 +52,7 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
 }
 
 CustomSelect.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
   selectedOption: PropTypes.string.isRequired,

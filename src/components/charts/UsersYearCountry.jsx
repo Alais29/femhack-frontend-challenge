@@ -40,7 +40,7 @@ const options = {
 }
 
 export const UsersYearCountry = () => {
-  const [country, setCountry] = useState('United States')
+  const [country, setCountry] = useState('Chile')
 
   const {
     countries,
