@@ -13,6 +13,10 @@ export const TopCountries = () => {
   const { data, loading, error } = useCountryDataByYear(year)
 
   const years = getYearsByRange(1980, 2020).map((item) => String(item))
+  const formatedYears = years.map((item, index) => ({
+    id: index,
+    name: item,
+  }))
 
   const handleChange = (value) => {
     setYear(Number(value))
@@ -48,7 +52,7 @@ export const TopCountries = () => {
   return (
     <>
       <CustomSelect
-        options={years}
+        options={formatedYears}
         title='Year'
         callback={handleChange}
         selectedOption={String(year)}
