@@ -16,6 +16,7 @@ import { Line } from 'react-chartjs-2'
 import { CustomSelect } from '../common/CustomSelect'
 import useAnimation from '../../hooks/useAnimation'
 
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -40,7 +41,7 @@ const options = {
 }
 
 export const UsersYearCountry = () => {
-  const [country, setCountry] = useState('United States')
+  const [country, setCountry] = useState('Chile')
 
   const { countries, loading: countriesLoading, error: countriesError } = useCountries()
   const { data, loading, error } = useDataByCountry(country)

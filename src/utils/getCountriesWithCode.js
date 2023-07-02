@@ -9,8 +9,10 @@ export const getCountriesWithCode = (countries) => {
 
         const codigo = datoTld ? datoTld.tlds[0].substring(1) : '';
         return {
-            country: pais,
-            code: codigo
+            id:codigo,
+            name: pais,
+            code: codigo,
+            image: `https://flagcdn.com/w20/${codigo.toLowerCase()}.png`
         };
     });
 

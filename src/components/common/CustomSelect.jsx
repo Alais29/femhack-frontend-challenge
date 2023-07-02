@@ -5,15 +5,9 @@ import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
-import useCountries from '../../hooks/useCountries';
-import { getCountriesWithCode } from '../../utils/getCountriesWithCode.js';
-
 
 export const CustomSelect = ({ options, title, callback, selectedOption }) => {
   const [value, setValue] = useState(selectedOption)
-
-  const { countries } = useCountries();
-  const countriesWithCode = getCountriesWithCode(countries);
 
   const handleChange = (event) => {
     setValue(event.target.value)
@@ -32,18 +26,18 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
           onChange={handleChange}
         >
           {options.map((item) => (
-            <MenuItem key={item} value={item}>
-              {item}
-              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} >
+            <MenuItem key={item.id} value={item.name}>
+              {item.name}
+              {item.image && <Box component="span" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} >
                 <img
                   loading="lazy"
                   width="20"
-                  src={`https://flagcdn.com/w20/gb.png`}
-                  srcSet={`https://flagcdn.com/w20/gb.png`}
-                  alt=""
+                  src={item.image}
+                  srcSet={item.image}
+                  alt={`image of ${item.name}`}
                 />
+              </Box>}
 
-              </Box>
             </MenuItem>
           ))}
         </Select>
@@ -53,7 +47,7 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
 }
 
 CustomSelect.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
   selectedOption: PropTypes.string.isRequired,
