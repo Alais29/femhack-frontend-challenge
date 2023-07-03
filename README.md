@@ -22,7 +22,7 @@ Technologies used 👇:
 <img alt="stylelint badge" src="https://img.shields.io/badge/stylelint-000?style=for-the-badge&logo=stylelint&logoColor=white" />
 </span>
 <span>
-<img alt="stylelint badge" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
+<img alt="eslint badge" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
 </span>
  <span>
 <img alt="react chart js badge" src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" />
@@ -48,19 +48,19 @@ Technologies used 👇:
 
  ### Users x Year Chart
 
-<img alt="react badge" src="./public/img/users-year.png" />
+<img alt="image from a chart displaying users x year" src="./public/img/users-year.png" />
 
 ### Users x Year x Country Chart
 
-<img alt="react badge" src="./public/img/users-year-country.gif" />
+<img alt="animated gif from a chart displaying users x year x country" src="./public/img/users-year-country.gif" />
 
 ### Top 10 countries from 1980 - 2020
 
-<img alt="react badge" src="./public/img/pie-chart.gif" />
+<img alt="animated gif from a chart displaying top 10 countries from 1980 to 2020" src="./public/img/pie-chart.gif" />
 
 ### World Map - top 10 countries 2020
 
-<img alt="react badge" src="./public/img/world-map.gif" />
+<img alt="animated gif from a chart displaying top 10 countries from 2020" src="./public/img/world-map.gif" />
 
  
 
