@@ -49,7 +49,7 @@ export const UsersYear = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <div className='chart-container'>
+        <div className='chart-container' data-testid='bar-chart'>
           <Bar options={options} data={chartData} />
         </div>
       )}
