@@ -42,6 +42,12 @@ Technologies used 👇:
 <span>
 <img alt="react badge" src="https://img.shields.io/badge/TestingLibrary-%23E33332?style=for-the-badge&logo=TestingLibrary&logoColor=white" />
  </span>
+
+ ## More about this project
+
+-..
+
+
  
 
 ## Prerequisites
@@ -71,6 +77,7 @@ API_URL=backend API URL
 - To start the development server, run `npm run dev`.
 - To build the production-ready code, run `npm run build`.
 - To preview the production build, run `npm run preview`.
+
 ## Linting and Formatting
 
 - To run ESLint and check for code errors, run `npm run lint`.
@@ -81,11 +88,22 @@ API_URL=backend API URL
 
 ## Why  React ...👀? Why ... ?
 
-- We decided to use `React` and `Vite` because they are the libraries we have the most experience with. Similarly, our choice of `MUI` was based on our familiarity with it. While we may not be experts in MUI, we have used it in some past projects, and it allows us to create acceptable layouts for the user.
+- We decided to use `React`, `Vite` & `Axios` because they are the libraries we have the most experience with. Similarly, our choice of `MUI` was based on our familiarity with it. While we may not be experts in MUI, we have used it in some past projects, and it allows us to create acceptable layouts for the user.
 
 - When it came to choosing a chart library, we conducted an internet search for popular options in React. We ultimately decided to go with `Charts.js` in its React version. Although it may not have the highest number of stars compared to libraries like Recharts, we believe that for the femhack project's MVP, Charts.js is more precise and straightforward. We considered Recharts to be better suited for more complex charting needs, and we also found Charts.js to have a more user-friendly UI.
 
 - For the decision regarding the chart that required a world map, we were interested in several libraries. The one that caught our attention the most was `react-globe`. However, it required knowledge of `three.js`, and we were unable to render the chart as expected. We extensively searched the internet and tried various iterations, but many libraries were either paid or similar to Google Maps. After much searching, we came across the library `React-SVG-World-Map`, which is quite simple and allowed us, given the time constraints of the project, to display the top countries of the year 2020.
+
+## Workflow
+
+The following techniques were used for project management: `pair-programming` and `code-review` for each Pull Request made.
+
+`Gitflow` was employed for commit management, primarily utilizing the /feature/{number-of-issue} folder structure for creating different branches.
+
+The refinement methodology was initially used to analyze the work that needed to be done. All cards with issues were created on a `Kanban board` [Link to kanban](https://github.com/users/Alais29/projects/2/views/1), with added links or descriptions as necessary.
+
+The `Projects` [Link to Projects](https://github.com/users/Alais29/projects/2/views/1?pane=info) section of Github was utilized to keep a direct record of the work done in the repository. It allowed for linking issues and PRs, which could be moved to "done" once the branch was merged.
+
 
 ## Folders Sctructure
 
@@ -93,7 +111,7 @@ API_URL=backend API URL
 
 - The folder `/hooks`: we added more information with comments inside each hook but mainly these components bring reusable data and also include an animation that allows a chart to display data every 0.5 seconds and update dynamically.
 
-- Inside `/services` folder, you will find different backend calls, and the Axios library is used.
+- Inside `/services` folder, you will find different backend ([Link to backend](https://github.com/nuwe-reports/femhack-II-frontend-challenge)) calls, and the `Axios` library is used.
 
 - Subsequently, we have the `/test` folder, where component tests are located, made with Vitest.
 
