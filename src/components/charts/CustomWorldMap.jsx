@@ -33,7 +33,7 @@ export const CustomWorldMap = () => {
             title='Top 10 Countries in 2020'
             subtitle='In this map, you can explore the top 10 countries with the highest number of internet users in 2020. By hovering over each country, you can view the corresponding number of users.'
           />
-          <div className='map-container'>
+          <div className='map-container' data-testid='world-map'>
             <WorldMap
               value-suffix='people'
               size='responsive'

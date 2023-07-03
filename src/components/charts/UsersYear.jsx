@@ -45,7 +45,7 @@ export const UsersYear = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <div className='chart-container'>
+        <div className='chart-container' data-testid='bar-chart'>
           <Title
             title='Internet Users by Year'
             subtitle='In this chart, you can check the number of internet users worldwide by year, spanning from 1980 to 2020.'

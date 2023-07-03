@@ -87,13 +87,13 @@ export const UsersYearCountry = () => {
         />
       )}
 
-      {loading && <p>Loading...</p>}
+      {loading && <p>Loading Chart...</p>}
       {error && <p>There was an error loading the data</p>}
       {data.length === 0 && !loading && !error ? (
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <div className='chart-container'>
+        <div className='chart-container' data-testid='line-chart' >
           <Line options={options} data={chartData} />
         </div>
       )}
