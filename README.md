@@ -45,8 +45,22 @@ Technologies used 👇:
 
  ## More about this project
 
--..
 
+ ### Users x Year Chart
+
+<img alt="react badge" src="./public/img/users-year.png" />
+
+### Users x Year x Country Chart
+
+<img alt="react badge" src="./public/img/users-year-country.gif" />
+
+### Top 10 countries from 1980 - 2020
+
+<img alt="react badge" src="./public/img/pie-chart.gif" />
+
+### World Map - top 10 countries 2020
+
+<img alt="react badge" src="./public/img/world-map.gif" />
 
  
 
@@ -201,6 +215,8 @@ There were some issues with the incoming data. For example, some countries didn'
 We had no prior experience with `Docker`, but we were able to set up and use the backend within containers. This gave us a better understanding of Docker's capabilities, and we believe it's a great tool for our workflow.
 
 We achieved  `100% SEO and accessibility` in the `Lighthouse` report. In the future, we hope to improve the performance metric to implement further enhancements.
+
+<img alt="react badge" src="./public/img/lighthouse-report.png" />
 
 We were able to perform some basic tests on our application. We plan to add more tests that cover things like headings and even UI elements.
 
