@@ -71,7 +71,6 @@ API_URL=backend API URL
 - To start the development server, run `npm run dev`.
 - To build the production-ready code, run `npm run build`.
 - To preview the production build, run `npm run preview`.
-
 ## Linting and Formatting
 
 - To run ESLint and check for code errors, run `npm run lint`.
@@ -81,17 +80,27 @@ API_URL=backend API URL
 - To automatically fix stylelint errors in stylesheets, run `npm run fix:styles`.
 
 ## Folders Sctructure
+
+We have decided to use a simple folder structure, where inside src we will have /assets, where useful images can be found that may be shared between components. Then we have the /components folder, which contains /charts, /common, and /layout. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
+
+Next are the hooks, which are custom hooks that provide data that can be reused among different components.
+
+In the services folder, you will find different backend calls, and the Axios library is used.
+
+Subsequently, we have the test folder, where component tests are located, made with Vitest.
+
+Finally, we have the /utils folder, where you can find reusable functions or information to consume in JSONC format.
+
 ```
 📦src
  ┣ 📂assets
  ┃ ┣ 📜chevronLeft.svg
- ┃ ┣ 📜countryCodes.js
- ┃ ┣ ..
+ ┃ ┣ 📜..
  ┣ 📂components
  ┃ ┣ 📂charts
  ┃ ┃ ┣ 📜TopCountries.jsx
  ┃ ┃ ┣ 📜UsersYear.jsx
- ┃ ┃ ┣ ...
+ ┃ ┃ ┣ 📜..
  ┃ ┣ 📂common
  ┃ ┃ ┗ 📜CustomSelect.jsx
  ┃ ┗ 📂layout
@@ -99,22 +108,22 @@ API_URL=backend API URL
  ┣ 📂hooks
  ┃ ┣ 📜useAnimation.jsx
  ┃ ┣ 📜useContryDataByYear.jsx
- ┃ ┣ 📜useCountries.jsx
- ┃ ┣ 📜...
+ ┃ ┣ 📜..
  ┣ 📂services
  ┃ ┣ 📜baseUrl.js
  ┃ ┣ 📜getCountries.js
  ┃ ┣ ..
  ┣ 📂test
- ┃ ┗ 📜App.test.jsx
- ┃ ┗ ...
+ ┃ ┣ 📜App.test.jsx
+ ┃ ┣ 📜setupTest.js
+ ┃ ┣ 📜..
  ┣ 📂utils
+ ┃ ┣ 📜countryCodes.js
  ┃ ┣ 📜getCountriesWithCode.js
  ┃ ┗ ..
  ┣ 📜App.css
  ┣ 📜App.jsx
- ┣ 📜main.jsx
- ┗ 📜setupTest.js
+ ┗ 📜main.jsx
 ```
 ## Dependencies
 
