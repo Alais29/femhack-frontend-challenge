@@ -48,17 +48,25 @@ Technologies used 👇:
 
  ### Users x Year Chart
 
+In this chart, you can check the number of internet users worldwide by year, spanning from 1980 to 2020.
+
 <img alt="image from a chart displaying users x year" src="./public/img/users-year.png" />
 
 ### Users x Year x Country Chart
+
+In this chart, you can check the number of internet users by year and by country. Please choose the country for which you would like to view the data.
 
 <img alt="animated gif from a chart displaying users x year x country" src="./public/img/users-year-country.gif" />
 
 ### Top 10 countries from 1980 - 2020
 
+In this chart, you can check the top 10 countries with the highest number of internet users for each year. Please select the desired year to view the corresponding data.
+
 <img alt="animated gif from a chart displaying top 10 countries from 1980 to 2020" src="./public/img/pie-chart.gif" />
 
 ### World Map - top 10 countries 2020
+
+In this map, you can explore the top 10 countries with the highest number of internet users in 2020. By hovering over each country, you can view the corresponding number of users.
 
 <img alt="animated gif from a chart displaying top 10 countries from 2020" src="./public/img/world-map.gif" />
 
@@ -114,14 +122,14 @@ The following techniques were used for project management: `pair-programming` an
 
 `Gitflow` was employed for commit management, primarily utilizing the /feature/{number-of-issue} folder structure for creating different branches.
 
-The refinement methodology was initially used to analyze the work that needed to be done. All cards with issues were created on a `Kanban board` [Link to kanban](https://github.com/users/Alais29/projects/2/views/1), with added links or descriptions as necessary.
+The refinement methodology was initially used to analyze the work that needed to be done. All cards with issues were created on a [Kanban board](https://github.com/users/Alais29/projects/2/views/1), with added links or descriptions as necessary.
 
-The `Projects` [Link to Projects](https://github.com/users/Alais29/projects/2/views/1?pane=info) section of Github was utilized to keep a direct record of the work done in the repository. It allowed for linking issues and PRs, which could be moved to "done" once the branch was merged.
+The [Projects](https://github.com/users/Alais29/projects/2/views/1?pane=info) section of Github was utilized to keep a direct record of the work done in the repository. It allowed for linking issues and PRs, which could be moved to "done" once the branch was merged.
 
 
 ## Folders Sctructure
 
-- We have decided to use a simple folder structure, where inside src we will have `/assets`, where useful images can be found that may be shared between components. Then we have the /components folder, which contains `/charts`, `/common`, and `/layout`. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
+- We have decided to use a simple folder structure, where inside src we will have `/assets`, where useful images can be found that may be shared between components. Then we have the `/components` folder, which contains `/charts`, `/common`, and `/layout`. The first folder has various chart components, 'common' has reusable and shared components, and finally 'layout' contains components that only contain others.
 
 - The folder `/hooks`: we added more information with comments inside each hook but mainly these components bring reusable data and also include an animation that allows a chart to display data every 0.5 seconds and update dynamically.
 
@@ -129,7 +137,7 @@ The `Projects` [Link to Projects](https://github.com/users/Alais29/projects/2/vi
 
 - Subsequently, we have the `/test` folder, where component tests are located, made with Vitest.
 
-- Finally, we have the `/utils` folder, where you can find reusable functions or information to consume in JSONC format.
+- Finally, we have the `/utils` folder, where you can find reusable functions or information to consume.
 
 ```
 📦src
@@ -206,7 +214,7 @@ In the future, we hope to be able to add tests to verify the different functions
 - [vitest](https://www.npmjs.com/package/vitest): ^0.32.2
 
 
-## What we have learn and what is next ... 👩‍💻
+## What we have learned and what is next ... 👩‍💻
 
 In this project, we learned a lot. Our experience with chart libraries was almost non-existent, but we managed to display the information successfully.
 
@@ -222,7 +230,7 @@ We were able to perform some basic tests on our application. We plan to add more
 
 Responsive design: We made an effort to ensure that the charts display well on smaller screens, but there is still work to be done in this area.
 
-Regarding styling, we believe there is room for improvement in both the `UI and UX` of the application. We have taken care to include appropriate alt and title attributes, as well as meta descriptions, titles, and subtitles for different sections. However, the overall user experience could be enhanced further.
+Regarding styling, we believe there is room for improvement in both the `UI and UX` of the application. We have taken care to include appropriate 'alt' and 'title' attributes, as well as meta descriptions, titles, and subtitles for different sections. However, the overall user experience could be enhanced further.
 
 ## Authors
 - 👤 **Alfonsina Lizardo** Github: [@Alais29](https://github.com/Alais29)
