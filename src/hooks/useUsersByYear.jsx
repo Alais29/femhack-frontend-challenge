@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import { getUsersXYear } from '../services/getUsersXYear'
 
 /**
- * Takes an array of years as input and returns a state variable `data` that holds
- * the response data from an API call for each year.
- * @returns The `data` state variable.
+ * Custom hook that fetches user data for multiple years and returns the data, loading state, and error state.
+ * @param years - array of years (as intergers) from which the data will be fetched.
+ * @returns The `useUsersByYear` function returns an object with three properties: `data`, `loading`,
+ * and `error`.
  */
 export const useUsersByYear = (years) => {
   const [data, setData] = useState([])

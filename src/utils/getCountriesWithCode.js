@@ -1,5 +1,12 @@
 import { countriestLds } from '../assets/countryCodes.js'
 
+/**
+ * The function getCountriesWithCode takes an array of country names and returns an array of objects
+ * containing the country name, country code, and an image URL of the country's flag.
+ * @param countries - An array of country names.
+ * @returns a new array of objects. Each object in the array has the properties "id", "name", "code",
+ * and "image".
+ */
 export const getCountriesWithCode = (countries) => {
   const newArray = countries.map((country) => {
     const tld = countriestLds.find((dato) => dato.country === country)
