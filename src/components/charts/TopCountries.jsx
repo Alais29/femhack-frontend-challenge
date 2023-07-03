@@ -5,6 +5,7 @@ import { CustomSelect } from '../common/CustomSelect'
 import { getYearsByRange } from '../../utils/getYearsByRange'
 import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
 import { Container } from '@mui/material'
+import { Title } from '../common/Title'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -51,6 +52,10 @@ export const TopCountries = () => {
 
   return (
     <>
+      <Title
+        title='Top 10 Countries'
+        subtitle='In this chart, you can check the top 10 countries with the highest number of internet users for each year. Please select the desired year to view the corresponding data.'
+      />
       <CustomSelect
         options={formatedYears}
         title='Year'
@@ -63,7 +68,7 @@ export const TopCountries = () => {
         <p>There is no data available</p>
       ) : (
         <Container maxWidth='sm'>
-          <div className='chart-container'>
+          <div className='chart-container' data-testid='pie-chart'>
             <Pie data={chartData} key={year} />
           </div>
         </Container>
