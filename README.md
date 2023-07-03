@@ -82,9 +82,17 @@ API_URL=backend API URL
 - To check for stylelint errors in stylesheets, run `npm run lint:styles`.
 - To automatically fix stylelint errors in stylesheets, run `npm run fix:styles`.
 
+## Why React? Why React-Charts-js ? Why React-Svg-world-map  👀?
+
+We decided to use `React` and `Vite` because they are the libraries we have the most experience with. Similarly, our choice of `MUI` was based on our familiarity with it. While we may not be experts in MUI, we have used it in some past projects, and it allows us to create acceptable layouts for the user.
+
+When it came to choosing a chart library, we conducted an internet search for popular options in React. We ultimately decided to go with `Charts.js` in its React version. Although it may not have the highest number of stars compared to libraries like Recharts, we believe that for the femhack project's MVP, Charts.js is more precise and straightforward. We considered Recharts to be better suited for more complex charting needs, and we also found Charts.js to have a more user-friendly UI.
+
+For the decision regarding the chart that required a world map, we were interested in several libraries. The one that caught our attention the most was `react-globe`. However, it required knowledge of `three.js`, and we were unable to render the chart as expected. We extensively searched the internet and tried various iterations, but many libraries were either paid or similar to Google Maps. After much searching, we came across the library `React-SVG-World-Map`, which is quite simple and allowed us, given the time constraints of the project, to display the top countries of the year 2020.
+
 ## Folders Sctructure
 
-We have decided to use a simple folder structure, where inside src we will have /assets, where useful images can be found that may be shared between components. Then we have the /components folder, which contains /charts, /common, and /layout. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
+We have decided to use a simple folder structure, where inside src we will have `/assets`, where useful images can be found that may be shared between components. Then we have the /components folder, which contains `/charts`, `/common`, and `/layout`. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
 
 Next are the hooks, which are custom hooks that provide data that can be reused among different components.
 
@@ -92,7 +100,7 @@ In the services folder, you will find different backend calls, and the Axios lib
 
 Subsequently, we have the test folder, where component tests are located, made with Vitest.
 
-Finally, we have the /utils folder, where you can find reusable functions or information to consume in JSONC format.
+Finally, we have the `/utils` folder, where you can find reusable functions or information to consume in JSONC format.
 
 ```
 📦src
