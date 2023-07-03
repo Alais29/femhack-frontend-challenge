@@ -9,8 +9,6 @@ import List from '@mui/material/List'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import MenuIcon from '../../assets/menu.svg'
-import ChevronLeft from '../../assets/chevronLeft.svg'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
@@ -92,17 +90,7 @@ export default function PersistentDrawerLeft() {
             edge='start'
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
           >
-            <img
-              className='menu-icon'
-              src={MenuIcon}
-              alt='Menu Icon'
-              style={{ width: '30px', height: '30px' }}
-            />
-             <svg xmlns="http://www.w3.org/2000/svg" width='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width='30px' height='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
             </svg>
@@ -139,12 +127,10 @@ export default function PersistentDrawerLeft() {
                   Chart List
                 </Typography>
                 <IconButton onClick={handleDrawerClose}>
-                  <img
-                    className='chevron-left'
-                    src={ChevronLeft}
-                    alt='Chevron Left'
-                    style={{ width: '30px', height: '30px' }}
-                  />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#42a5f5" width='30px' height='30px' viewBox="0 0 24 24" strokeWidth="1.5" 
+                    className="chevron-left">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
                 </IconButton>
               </Box>
 
