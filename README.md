@@ -44,13 +44,11 @@ Technologies used 👇:
  </span>
  
 
-
 ## Prerequisites
 Make sure you have the following software installed on your machine:
 
 - Node.js (version 14 or above)
 - npm (version 7 or above)
-
 
 ## Installation
 
@@ -68,7 +66,6 @@ npm install
 API_URL=backend API URL
 ```
 
-
 ## Usage
 
 - To start the development server, run `npm run dev`.
@@ -82,25 +79,25 @@ API_URL=backend API URL
 - To check for stylelint errors in stylesheets, run `npm run lint:styles`.
 - To automatically fix stylelint errors in stylesheets, run `npm run fix:styles`.
 
-## Why React? Why React-Charts-js ? Why React-Svg-world-map  👀?
+## Why  React ...👀? Why ... ?
 
-We decided to use `React` and `Vite` because they are the libraries we have the most experience with. Similarly, our choice of `MUI` was based on our familiarity with it. While we may not be experts in MUI, we have used it in some past projects, and it allows us to create acceptable layouts for the user.
+- We decided to use `React` and `Vite` because they are the libraries we have the most experience with. Similarly, our choice of `MUI` was based on our familiarity with it. While we may not be experts in MUI, we have used it in some past projects, and it allows us to create acceptable layouts for the user.
 
-When it came to choosing a chart library, we conducted an internet search for popular options in React. We ultimately decided to go with `Charts.js` in its React version. Although it may not have the highest number of stars compared to libraries like Recharts, we believe that for the femhack project's MVP, Charts.js is more precise and straightforward. We considered Recharts to be better suited for more complex charting needs, and we also found Charts.js to have a more user-friendly UI.
+- When it came to choosing a chart library, we conducted an internet search for popular options in React. We ultimately decided to go with `Charts.js` in its React version. Although it may not have the highest number of stars compared to libraries like Recharts, we believe that for the femhack project's MVP, Charts.js is more precise and straightforward. We considered Recharts to be better suited for more complex charting needs, and we also found Charts.js to have a more user-friendly UI.
 
-For the decision regarding the chart that required a world map, we were interested in several libraries. The one that caught our attention the most was `react-globe`. However, it required knowledge of `three.js`, and we were unable to render the chart as expected. We extensively searched the internet and tried various iterations, but many libraries were either paid or similar to Google Maps. After much searching, we came across the library `React-SVG-World-Map`, which is quite simple and allowed us, given the time constraints of the project, to display the top countries of the year 2020.
+- For the decision regarding the chart that required a world map, we were interested in several libraries. The one that caught our attention the most was `react-globe`. However, it required knowledge of `three.js`, and we were unable to render the chart as expected. We extensively searched the internet and tried various iterations, but many libraries were either paid or similar to Google Maps. After much searching, we came across the library `React-SVG-World-Map`, which is quite simple and allowed us, given the time constraints of the project, to display the top countries of the year 2020.
 
 ## Folders Sctructure
 
-We have decided to use a simple folder structure, where inside src we will have `/assets`, where useful images can be found that may be shared between components. Then we have the /components folder, which contains `/charts`, `/common`, and `/layout`. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
+- We have decided to use a simple folder structure, where inside src we will have `/assets`, where useful images can be found that may be shared between components. Then we have the /components folder, which contains `/charts`, `/common`, and `/layout`. The first folder has various chart components, common has reusable and shared components, and finally /layout contains components that only contain others.
 
-Next are the hooks, which are custom hooks that provide data that can be reused among different components.
+- The folder `/hooks`: we added more information with comments inside each hook but mainly these components bring reusable data and also include an animation that allows a chart to display data every 0.5 seconds and update dynamically.
 
-In the services folder, you will find different backend calls, and the Axios library is used.
+- Inside `/services` folder, you will find different backend calls, and the Axios library is used.
 
-Subsequently, we have the test folder, where component tests are located, made with Vitest.
+- Subsequently, we have the `/test` folder, where component tests are located, made with Vitest.
 
-Finally, we have the `/utils` folder, where you can find reusable functions or information to consume in JSONC format.
+- Finally, we have the `/utils` folder, where you can find reusable functions or information to consume in JSONC format.
 
 ```
 📦src
@@ -114,6 +111,7 @@ Finally, we have the `/utils` folder, where you can find reusable functions or i
  ┃ ┃ ┣ 📜..
  ┃ ┣ 📂common
  ┃ ┃ ┗ 📜CustomSelect.jsx
+ ┃ ┃ ┗ 📜...
  ┃ ┗ 📂layout
  ┃ ┃ ┗ 📜PersistentDrawerLeft.jsx
  ┣ 📂hooks
@@ -174,6 +172,23 @@ In the future, we hope to be able to add tests to verify the different functions
 - [stylelint-config-standard-scss](https://www.npmjs.com/package/stylelint-config-standard-scss): ^10.0.0
 - [vite](https://www.npmjs.com/package/vite): ^4.3.9
 - [vitest](https://www.npmjs.com/package/vitest): ^0.32.2
+
+
+## What we have learn and what is next ... 👩‍💻
+
+In this project, we learned a lot. Our experience with chart libraries was almost non-existent, but we managed to display the information successfully.
+
+There were some issues with the incoming data. For example, some countries didn't have information for all years, and sometimes the years were missing altogether. We had to manipulate the data to ensure that the charts didn't break.
+
+We had no prior experience with `Docker`, but we were able to set up and use the backend within containers. This gave us a better understanding of Docker's capabilities, and we believe it's a great tool for our workflow.
+
+We achieved  `100% SEO and accessibility` in the `Lighthouse` report. In the future, we hope to improve the performance metric to implement further enhancements.
+
+We were able to perform some basic tests on our application. We plan to add more tests that cover things like headings and even UI elements.
+
+Responsive design: We made an effort to ensure that the charts display well on smaller screens, but there is still work to be done in this area.
+
+Regarding styling, we believe there is room for improvement in both the `UI and UX` of the application. We have taken care to include appropriate alt and title attributes, as well as meta descriptions, titles, and subtitles for different sections. However, the overall user experience could be enhanced further.
 
 ## Authors
 - 👤 **Alfonsina Lizardo** Github: [@Alais29](https://github.com/Alais29)
