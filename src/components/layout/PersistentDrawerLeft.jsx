@@ -93,18 +93,22 @@ export default function PersistentDrawerLeft() {
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
           >
             <img
+              className='menu-icon'
               src={MenuIcon}
               alt='Menu Icon'
               style={{ width: '30px', height: '30px' }}
             />
+             <svg xmlns="http://www.w3.org/2000/svg" width='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
           </IconButton>
           <Typography variant='h6' noWrap component='h1'>
             React Divas
-            <img
-              src={logo}
-              alt='Chevron Left'
-              style={{ width: '35px', height: '35px' }}
-            />{' '}
             - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
@@ -123,21 +127,33 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <Box className='drawer-container'>
-          <Box>
+          <Box >
             <DrawerHeader>
-              <IconButton onClick={handleDrawerClose}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }} >
                 <img
-                  src={ChevronLeft}
-                  alt='Chevron Left'
+                  src={logo}
+                  alt='Menu Icon'
                   style={{ width: '30px', height: '30px' }}
                 />
-              </IconButton>
+                <Typography sx={{ fontWeight: 'bold' }} component='h2'>
+                  Chart List
+                </Typography>
+                <IconButton onClick={handleDrawerClose}>
+                  <img
+                    className='chevron-left'
+                    src={ChevronLeft}
+                    alt='Chevron Left'
+                    style={{ width: '30px', height: '30px' }}
+                  />
+                </IconButton>
+              </Box>
+
             </DrawerHeader>
             <Divider />
             <List>
               {[
-                'Users x Year',
-                'Users x Year x Country',
+                'Users by Year',
+                'Users by Year by Country',
                 'Top 10 Countries',
                 'World Map',
               ].map((text, index) => (
