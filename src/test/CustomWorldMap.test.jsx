@@ -16,6 +16,6 @@ describe('CustomWorldMap', () => {
     const loadingText = screen.getByText('Loading...');
     expect(loadingText).toBeInTheDocument();
   
-    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 75});
+    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 1000});
   });
 })

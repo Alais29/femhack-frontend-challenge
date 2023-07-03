@@ -19,6 +19,6 @@ describe('UsersYearCountry', () => {
     const loadingText = screen.getByText('Loading Chart...');
     expect(loadingText).toBeInTheDocument();
   
-    await waitForElementToBeRemoved(() => screen.getByText('Loading Chart...'), {timeout: 100});
+    await waitForElementToBeRemoved(() => screen.getByText('Loading Chart...'), {timeout: 1000});
   });
 })

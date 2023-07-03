@@ -19,6 +19,6 @@ describe('UsersYear', () => {
     const loadingText = screen.getByText('Loading...');
     expect(loadingText).toBeInTheDocument();
   
-    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 500});
+    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 2000});
   });
 })

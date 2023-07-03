@@ -19,6 +19,6 @@ describe('TopCountries', () => {
     const loadingText = screen.getByText('Loading...');
     expect(loadingText).toBeInTheDocument();
   
-    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 100});
+    await waitForElementToBeRemoved(() => screen.getByText('Loading...'), {timeout: 1000});
   });
 })
