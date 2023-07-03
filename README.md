@@ -45,7 +45,7 @@ Technologies used 👇:
 
  ## More about this project
 
-
+Frontend Challenge from the femhack hackathon Vol. II by Nuwe on July 2023, where a series of charts are shown to properly visualize internet usage data around the world.
  ### Users x Year Chart
 
 In this chart, you can check the number of internet users worldwide by year, spanning from 1980 to 2020.
@@ -56,7 +56,7 @@ In this chart, you can check the number of internet users worldwide by year, spa
 
 In this chart, you can check the number of internet users by year and by country. Please choose the country for which you would like to view the data.
 
-<img alt="animated gif from a chart displaying users x year x country" src="./public/img/users-year-country.gif" />
+<img alt="animated gif from a chart displaying users x year x country" src="./public/img/users-years-country.gif" />
 
 ### Top 10 countries from 1980 - 2020
 
@@ -231,6 +231,11 @@ We were able to perform some basic tests on our application. We plan to add more
 Responsive design: We made an effort to ensure that the charts display well on smaller screens, but there is still work to be done in this area.
 
 Regarding styling, we believe there is room for improvement in both the `UI and UX` of the application. We have taken care to include appropriate 'alt' and 'title' attributes, as well as meta descriptions, titles, and subtitles for different sections. However, the overall user experience could be enhanced further.
+
+There are some pending issues to be addressed and can be reviewed in the following [board](https://github.com/users/Alais29/projects/2/views/1)
+
+
+
 
 ## Authors
 - 👤 **Alfonsina Lizardo** Github: [@Alais29](https://github.com/Alais29)
