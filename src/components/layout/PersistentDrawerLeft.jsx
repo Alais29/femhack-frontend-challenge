@@ -17,7 +17,7 @@ import ListItemText from '@mui/material/ListItemText'
 import { UsersYearCountry } from '../charts/UsersYearCountry'
 import { UsersYear } from '../charts/UsersYear'
 import { TopCountries } from '../charts/TopCountries'
-import { CustomWorldMap } from '../charts/WorldMap'
+import { CustomWorldMap } from '../charts/CustomWorldMap'
 import logo from '../../assets/logo.png'
 import github from '../../assets/github-logo.png'
 

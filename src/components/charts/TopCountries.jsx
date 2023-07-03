@@ -63,7 +63,7 @@ export const TopCountries = () => {
         <p>There is no data available</p>
       ) : (
         <Container maxWidth='sm'>
-          <div className='chart-container'>
+          <div className='chart-container' data-testid='pie-chart'>
             <Pie data={chartData} key={year} />
           </div>
         </Container>

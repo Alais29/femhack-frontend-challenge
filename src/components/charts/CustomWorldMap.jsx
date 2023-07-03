@@ -27,13 +27,15 @@ export const CustomWorldMap = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <WorldMap
-          color='red'
-          title='Top 10 Countries with the most Internet Users in 2020'
-          value-suffix='people'
-          size='responsive'
-          data={countryData}
-        />
+        <div data-testid='world-map'>
+          <WorldMap
+            color='red'
+            title='Top 10 Countries with the most Internet Users in 2020'
+            value-suffix='people'
+            size='responsive'
+            data={countryData}
+          />
+        </div>
       )}
     </>
   )
