@@ -1,18 +1,19 @@
 import WorldMap from 'react-svg-worldmap'
 import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
 import { countriestLds } from '../../assets/countryCodes'
+import { Title } from '../common/Title'
 
 export const CustomWorldMap = () => {
   const { data, loading, error } = useCountryDataByYear(2020)
 
   let countriesCodes = {}
   const countryData = data.map((item) => {
-    countriestLds.forEach(country => {
+    countriestLds.forEach((country) => {
       if (country.country === item.country) {
         countriesCodes[item.country] = country.tlds[0].replace('.', '')
       }
     })
-    const countryCode = countriesCodes[ item.country ]
+    const countryCode = countriesCodes[item.country]
     return {
       country: countryCode,
       value: item.users,
@@ -27,15 +28,20 @@ export const CustomWorldMap = () => {
         <p>There is no data available</p>
       ) : null}
       {!loading && !error && data.length > 0 && (
-        <div data-testid='world-map'>
-          <WorldMap
-            color='red'
-            title='Top 10 Countries with the most Internet Users in 2020'
-            value-suffix='people'
-            size='responsive'
-            data={countryData}
+        <>
+          <Title
+            title='Top 10 Countries in 2020'
+            subtitle='In this map, you can explore the top 10 countries with the highest number of internet users in 2020. By hovering over each country, you can view the corresponding number of users.'
           />
-        </div>
+          <div className='map-container' data-testid='world-map'>
+            <WorldMap
+              value-suffix='people'
+              size='responsive'
+              data={countryData}
+              color='#0f60b1'
+            />
+          </div>
+        </>
       )}
     </>
   )

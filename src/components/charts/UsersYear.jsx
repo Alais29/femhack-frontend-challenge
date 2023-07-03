@@ -4,14 +4,14 @@ import {
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
   Tooltip,
   Legend,
 } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 import { useUsersByYear } from '../../hooks/useUsersByYear'
+import { Title } from '../common/Title'
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend)
 
 export const UsersYear = () => {
   const years = getYearsByRange(1980, 2020)
@@ -23,10 +23,6 @@ export const UsersYear = () => {
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Internet Users By Year',
-      },
     },
   }
 
@@ -36,7 +32,7 @@ export const UsersYear = () => {
       {
         label: 'Users',
         data,
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: 'rgba(15, 96, 177, 0.5)',
       },
     ],
   }
@@ -50,6 +46,10 @@ export const UsersYear = () => {
       ) : null}
       {!loading && !error && data.length > 0 && (
         <div className='chart-container' data-testid='bar-chart'>
+          <Title
+            title='Internet Users by Year'
+            subtitle='In this chart, you can check the number of internet users worldwide by year, spanning from 1980 to 2020.'
+          />
           <Bar options={options} data={chartData} />
         </div>
       )}
