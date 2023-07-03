@@ -90,14 +90,25 @@ export default function PersistentDrawerLeft() {
             edge='start'
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width='30px' height='30px' fill="white" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="menu-burger">
-              <path strokeLinecap="round" strokeLinejoin="round"
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='30px'
+              height='30px'
+              fill='white'
+              viewBox='0 0 24 24'
+              strokeWidth='1.5'
+              stroke='currentColor'
+              className='menu-burger'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5'
+              />
             </svg>
           </IconButton>
           <Typography variant='h6' noWrap component='h1'>
-            React Divas
-            - Femhack Frontend Challenge
+            React Divas - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
@@ -115,9 +126,16 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <Box className='drawer-container'>
-          <Box >
+          <Box>
             <DrawerHeader>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }} >
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  width: '100%',
+                  alignItems: 'center',
+                }}
+              >
                 <img
                   src={logo}
                   alt='Menu Icon'
@@ -127,13 +145,24 @@ export default function PersistentDrawerLeft() {
                   Chart List
                 </Typography>
                 <IconButton onClick={handleDrawerClose}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#42a5f5" width='30px' height='30px' viewBox="0 0 24 24" strokeWidth="1.5" 
-                    className="chevron-left">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    stroke='#42a5f5'
+                    width='30px'
+                    height='30px'
+                    viewBox='0 0 24 24'
+                    strokeWidth='1.5'
+                    className='chevron-left'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M15.75 19.5L8.25 12l7.5-7.5'
+                    />
                   </svg>
                 </IconButton>
               </Box>
-
             </DrawerHeader>
             <Divider />
             <List>
