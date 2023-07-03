@@ -1,6 +1,6 @@
 import WorldMap from 'react-svg-worldmap'
 import { useCountryDataByYear } from '../../hooks/useContryDataByYear'
-import { countriestLds } from '../../assets/countryCodes'
+import { countriestLds } from '../../utils/countryCodes'
 import { Title } from '../common/Title'
 
 export const CustomWorldMap = () => {
