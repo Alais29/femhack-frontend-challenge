@@ -4,7 +4,7 @@ import { getCountries } from '../services/getCountries'
 import { getCountriesWithCode } from '../utils/getCountriesWithCode'
 
 /**
- * Custom hook that fetches a list of countries, formats them with country codes, 
+ * Custom hook that fetches a list of countries, formats them with country codes,
  * and returns the countries, loading state, and error state.
  * @returns An object with three properties: `countries`, `loading`, and `error`.
  */

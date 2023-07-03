@@ -7,7 +7,6 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 } from 'chart.js'
@@ -15,13 +14,13 @@ import { getYearsByRange } from '../../utils/getYearsByRange'
 import { Line } from 'react-chartjs-2'
 import { CustomSelect } from '../common/CustomSelect'
 import useAnimation from '../../hooks/useAnimation'
+import { Title } from '../common/Title'
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
   Legend,
 )
@@ -31,10 +30,6 @@ const options = {
   plugins: {
     legend: {
       position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart',
     },
   },
 }
@@ -66,14 +61,18 @@ export const UsersYearCountry = () => {
       {
         label: country,
         data: internetUsersNumber.slice(0, currentYear - 1980 + 1),
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgb(15, 96, 177)',
+        backgroundColor: 'rgba(15, 96, 177, 0.5)',
       },
     ],
   }
 
   return (
     <>
+      <Title
+        title='Internet Users by Year by Country'
+        subtitle='In this chart, you can check the number of internet users by year and by country. Please choose the country for which you would like to view the data.'
+      />
       {countriesLoading && <p>Loading...</p>}
       {countriesError && <p>There was an error loading the data</p>}
       {countries.length === 0 && !countriesLoading && !countriesError ? (

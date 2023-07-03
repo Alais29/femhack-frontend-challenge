@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.custom-title {
+  color: #1976d2
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
 .chart-container {
   position: relative;
   margin: auto;

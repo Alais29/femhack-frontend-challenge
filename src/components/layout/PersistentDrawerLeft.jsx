@@ -99,12 +99,13 @@ export default function PersistentDrawerLeft() {
             />
           </IconButton>
           <Typography variant='h6' noWrap component='h1'>
-            React Divas  
+            React Divas
             <img
               src={logo}
               alt='Chevron Left'
               style={{ width: '35px', height: '35px' }}
-            /> - Femhack Frontend Challenge
+            />{' '}
+            - Femhack Frontend Challenge
           </Typography>
         </Toolbar>
       </AppBar>
@@ -159,7 +160,24 @@ export default function PersistentDrawerLeft() {
                 alignItems: 'center',
               }}
             >
-              <img src={logo} alt='logo' style={{ width: '50px', height: '50px' }} />
+              <Typography align='center' variant='caption' component='small'>
+                *Open in Desktop for the best user experience
+              </Typography>
+            </Box>
+            <Divider />
+            <Box
+              sx={{
+                padding: '0.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src={logo}
+                alt='logo'
+                style={{ width: '50px', height: '50px' }}
+              />
               <a href='https://github.com/Alais29/femhack-frontend-challenge'>
                 <Typography variant='caption' noWrap component='div'>
                   React Divas - FemHack
@@ -167,7 +185,11 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
+                      style={{
+                        width: '15px',
+                        height: '15px',
+                        marginLeft: '0.5rem',
+                      }}
                     />
                   </span>
                 </Typography>
@@ -180,7 +202,11 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
+                      style={{
+                        width: '15px',
+                        height: '15px',
+                        marginLeft: '0.5rem',
+                      }}
                     />
                   </span>
                 </Typography>
@@ -192,7 +218,11 @@ export default function PersistentDrawerLeft() {
                     <img
                       src={github}
                       alt='github'
-                      style={{ width: '15px', height: '15px', marginLeft: '0.5rem' }}
+                      style={{
+                        width: '15px',
+                        height: '15px',
+                        marginLeft: '0.5rem',
+                      }}
                     />
                   </span>
                 </Typography>
