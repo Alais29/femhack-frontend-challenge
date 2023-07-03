@@ -39,6 +39,9 @@ Technologies used 👇:
  <span> 
 <img alt="vitest badge" src="https://img.shields.io/badge/Vitest-B73BFE?style=for-the-badge&logo=vitest&logoColor=FFD62E" />
 </span>
+<span>
+<img alt="react badge" src="https://img.shields.io/badge/TestingLibrary-%23E33332?style=for-the-badge&logo=TestingLibrary&logoColor=white" />
+ </span>
  
 
 
@@ -125,6 +128,13 @@ Finally, we have the /utils folder, where you can find reusable functions or inf
  ┣ 📜App.jsx
  ┗ 📜main.jsx
 ```
+
+## Testing
+
+We decided to use Vitest along with react-testing-library to perform some unit tests. Mainly, we were able to conduct tests to determine if the components are being rendered and also if the loading functionality is working.
+In the future, we hope to be able to add tests to verify the different functions, especially the data fetching.
+
+
 ## Dependencies
 
 - [react](https://www.npmjs.com/package/react): ^18.2.0
