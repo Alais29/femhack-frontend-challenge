@@ -4,7 +4,7 @@
 <img alt="react badge" src="src/assets/logo.png" />
 
 
-> Challenge from Frontend femhack challenge by nuwe June 2023
+> Challenge from Frontend femhack challenge by nuwe July 2023
 
 Technologies used 👇:
 
@@ -28,7 +28,7 @@ Technologies used 👇:
 <img alt="react chart js badge" src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" />
  </span>
  <span>
-<img alt="world map svg badge" src="https://img.shields.io/badge/worldMapSVG-238636?style=for-the-badge&logo=world&logoColor=white" />
+<img alt="world map svg badge" src="https://img.shields.io/badge/React%20SVG%20WorldMap-238636?style=for-the-badge&logo=world&logoColor=white" />
  </span>
   <span>
 <img alt="material ui badge" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" />
