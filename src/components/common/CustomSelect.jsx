@@ -25,7 +25,7 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
           label={title}
           onChange={handleChange}
         >
-          {options.map((item) => (
+          {options?.length > 0 ? options.map((item) => (
             <MenuItem key={item.id} value={item.name}>
               {item.image && (
                 <Box
@@ -44,7 +44,7 @@ export const CustomSelect = ({ options, title, callback, selectedOption }) => {
               {''}
               {item.name}
             </MenuItem>
-          ))}
+          )) : ''}
         </Select>
       </FormControl>
     </Box>
